@@ -1,0 +1,49 @@
+:root{
+    --default-font-size: 1.5rem;
+    --default-grid-gap: 0.5em;
+    --default-text-color: white;
+    --card-padding: 2em 4em;
+    --border-radius: 0.5em;
+    --default-para-font-size: 0.9rem;
+    --deco-span-color: rgb(251, 255, 0);
+    --annon-container-padding: 1em 4em;
+    --review-container-padding: 1em 2em;
+
+
+    --review-box-bg-col: #00000047;
+    --review-card-padding: 1.2em 2em;
+
+    --main-col: #1B2529;
+    --main-col-bright: #3F8C50;
+
+    --space-bn-articles: 4em;
+    --article-title-size: 2rem;
+}
+
+*{
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: var(--default-font-size);
+}
+
+
+@media only screen and (max-width: 700px){
+    :root{
+        --annon-container-padding: 1em 1em;
+        --card-padding: 1em 1em;
+    }
+}
+@media only screen and (max-width: 300px){
+    :root{
+        --article-title-size: 1.5rem;
+        --review-container-padding: 1em 0.5em;
+    }
+    html{
+        font-size: 5px;
+    }
+}

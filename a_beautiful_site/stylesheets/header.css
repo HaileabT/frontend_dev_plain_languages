@@ -1,0 +1,145 @@
+.header{
+    background-color: #100B1C;
+}
+
+
+.header-container{
+    padding: 1em 15%;
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #100B1C;
+    color: rgb(255, 255, 255);
+    align-items: baseline;
+    transform: translateY(0%);
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.header-container.hidden{
+    transform: translateY(-70%);
+}
+.header-container:hover{
+    transform: translateY(0%);
+}
+.logo-container{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.main-nav-container{
+    width: 280px;
+}
+
+.main-nav-container > ul{
+    display: flex;
+    list-style: none;
+    font-weight: lighter;
+    justify-content: space-between;
+}
+
+
+.nav-links-list > li > a{
+    text-decoration: none;
+    color: rgb(240, 239, 255);
+    font-size: 1.1rem;
+}
+.nav-link{
+    transition: 0.3s linear;
+}
+.nav-link:hover{
+    color: #3F8C50;
+}
+
+.motto-sec{
+    display: flex;
+    padding: 6em 1.8em 3em 1.8em;
+    justify-content: center;
+}
+
+.motto-container{
+    color: white;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.motto-container > p{
+    flex: 0.8;
+    font-size: 0.7rem;
+}
+
+.motto{
+    background-image: linear-gradient(45deg, rgb(119, 0, 255), rgb(255, 111, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: blur(10px);
+    animation: rotation-hue 1s linear infinite;
+}
+
+@keyframes rotation-hue{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    25%{
+        filter: hue-rotate(45deg);
+    }
+    50%{
+        filter: hue-rotate(0deg);
+    }
+    75%{
+        filter: hue-rotate(-45deg);
+    }
+    100%{
+        filter: hue-rotate(0deg);
+    }
+}
+
+.blurred{
+    position: absolute;
+    filter: blur(10px);
+}
+
+.motto-blur{
+    font-size: 2em;
+    transform: translateX(-40%);
+    
+    opacity: 30%;
+}
+
+.menu-container{
+    display: none;
+    font-weight: bold;
+}
+
+.menu-button{
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color: #3F8C50;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+    .motto-container{
+        color: white;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav-container{
+        display: none;
+    }
+
+    .menu-container{
+        display: block;
+    }
+}
+
+
